@@ -37,7 +37,7 @@ app.use(
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: '*',
     credentials: true,
   })
 );
@@ -53,6 +53,10 @@ app.use(WishListRoute);
 app.use(ShipmentRoute);
 app.use(OrderItemRoute);
 app.use(AuthRoute);
+
+app.get('/', (req, res) => {
+  res.send('API is running...');
+})
 
 // (async () => {
 //   await db.sync();
