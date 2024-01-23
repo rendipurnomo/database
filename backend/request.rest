@@ -1,0 +1,46 @@
+//register
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "first_name": "admin",
+  "last_name": "digital",
+  "email": "digital@umkm.com",
+  "password": "Digital234",
+  "confirmPassword": "Digital234",
+  "role": "admin"
+}
+###
+//login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "digital@umkm.com",
+  "password": "Digital234"
+}
+
+###
+//session
+GET http://localhost:5000/me
+
+###
+//logout
+DELETE http://localhost:5000/logout
+
+###
+// getAllUser
+GET http://localhost:5000/customers
+
+###
+// getAll Product
+GET http://localhost:5000/products
+
+###
+// getAll Product
+PATCH  http://localhost:5000/categories/2
+Content-Type: application/json
+
+{
+  "name": "otomotif"
+}
